@@ -1,0 +1,347 @@
+@import "./styles.css";
+
+/* 极简约风格主题 */
+:root {
+    --primary-color: #000;
+    --secondary-color: #333;
+    --accent-color: #666;
+    --text-primary: #000;
+    --text-secondary: #666;
+    --text-muted: #999;
+    --bg-primary: #fff;
+    --bg-secondary: #f9f9f9;
+    --border-color: #e5e5e5;
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    font-weight: 400;
+}
+
+/* 导航栏极简化 */
+.header {
+    background: var(--bg-primary) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    padding: 1rem 0;
+}
+
+.header .navbar-brand {
+    color: var(--text-primary) !important;
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+}
+
+.header .nav-link {
+    color: var(--text-secondary) !important;
+    font-weight: 400 !important;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.2s ease;
+}
+
+.header .nav-link:hover {
+    color: var(--text-primary) !important;
+}
+
+.header .nav-link::after {
+    display: none;
+}
+
+/* Hero区域极简化 */
+.hero-section {
+    background: var(--bg-primary) !important;
+    min-height: 60vh;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.hero-overlay {
+    display: none;
+}
+
+.hero-title {
+    color: var(--text-primary) !important;
+    font-size: 2.5rem !important;
+    font-weight: 300 !important;
+    margin-bottom: 1rem;
+    text-shadow: none !important;
+}
+
+.hero-subtitle {
+    color: var(--text-secondary) !important;
+    font-size: 1.1rem !important;
+    font-weight: 300 !important;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+    background: var(--text-primary) !important;
+    border: 1px solid var(--text-primary) !important;
+    color: var(--bg-primary) !important;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-radius: 2px !important;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.hero-buttons .btn:hover {
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.hero-buttons .btn-outline-light {
+    background: transparent !important;
+    border: 1px solid var(--text-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+.hero-buttons .btn-outline-light:hover {
+    background: var(--text-primary) !important;
+    color: var(--bg-primary) !important;
+}
+
+/* 个人照片极简化 */
+.profile-photo-container {
+    margin-top: -2rem;
+    padding-bottom: 2rem;
+}
+
+.profile-img {
+    width: 120px !important;
+    height: 120px !important;
+    border: none !important;
+    box-shadow: var(--shadow-subtle) !important;
+    transition: none !important;
+}
+
+.profile-img:hover {
+    transform: none !important;
+}
+
+/* 章节样式极简化 */
+.section-padding {
+    padding: 1.5rem 0;
+}
+
+.section-title {
+    color: var(--text-primary) !important;
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    margin-bottom: 2rem !important;
+    text-align: left !important;
+    font-family: inherit !important;
+}
+
+.section-title i {
+    display: none;
+}
+
+.section-title::after {
+    display: none;
+}
+
+/* 主要内容区域极简化 */
+.main-body {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-body h3 {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.main-body h4 {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-body p {
+    margin-bottom: 1.2rem;
+    color: var(--text-primary);
+}
+
+.main-body ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-body li {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.main-body strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.main-body em {
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.main-body code {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 0.2rem 0.4rem;
+    border-radius: 2px;
+    font-size: 0.9em;
+    font-family: 'Monaco', 'Consolas', monospace;
+}
+
+/* 背景色极简化 */
+.bg-light {
+    background: var(--bg-secondary) !important;
+}
+
+.bg-white {
+    background: var(--bg-primary) !important;
+}
+
+/* 页脚极简化 */
+.footer {
+    background: var(--bg-secondary) !important;
+    border-top: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+}
+
+.footer .text-white-50 {
+    color: var(--text-secondary) !important;
+}
+
+.footer .social-links a {
+    color: var(--text-secondary) !important;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.footer .social-links a:hover {
+    color: var(--text-primary) !important;
+    background: none !important;
+    transform: none !important;
+}
+
+/* 容器和布局调整 */
+.container {
+    max-width: 900px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+    
+    .section-title {
+        font-size: 1.3rem !important;
+    }
+    
+    .profile-img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .main-body {
+        font-size: 0.95rem;
+    }
+    
+    .section-padding {
+        padding: 1.5rem 0;
+    }
+}
+
+/* 移除所有动画效果 */
+* {
+    animation: none !important;
+    transition-duration: 0.2s !important;
+}
+
+/* 滚动条极简化 */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* 链接样式 */
+a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--border-color);
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+}
+
+/* 表格样式极简化 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background: var(--bg-secondary);
+    font-weight: 500;
+}
+
+/* 按钮重置 */
+.btn:focus,
+.btn:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
